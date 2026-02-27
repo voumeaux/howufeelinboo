@@ -1,0 +1,405 @@
+/* Color Palette */
+:root {
+  --pink-light: #f5becb;
+  --pink-medium: #ff85a2;
+  --pink-dark: #f75c7e;
+  --white: #ffffff;
+  --glass-white: rgba(255, 255, 255, 0.8);
+  --shadow: rgba(255, 133, 162, 0.2);
+  --text: #4a4a4a;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  background-color: var(--pink-light);
+  background-image: radial-gradient(circle at 2px 2px, var(--white) 1px, transparent 0);
+  background-size: 40px 40px;
+  font-family: 'Huglove', system-ui, sans-serif;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  cursor: url('images/cursor.cur'), auto;
+}
+
+/* Use !important to override default browser styles */
+a, 
+button, 
+input[type="submit"], 
+input[type="button"], 
+.clickable-element {
+  cursor: url('images/click.cur'), pointer !important;
+}
+
+section {
+  background-color: #fff5f7; /* Very light pink/white base */
+  border: 3px solid #ffc0cb; /* Cotton candy pink border */
+  border-radius: 30px; /* Softer, rounder corners */
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2); /* Soft pink glow shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px); /* Gentle lift when hovering */
+  box-shadow: 0 15px 30px rgba(255, 182, 193, 0.4);
+}
+
+button {
+  background-color: #ffc0cb; /* Cotton candy pink */
+  color: white;
+  font-family: 'Huglove', sans-serif; /* Your custom font */
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: 2px solid #ffffff;
+  border-radius: 50px; /* Pill shape */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  background-color: #ffb1c1; /* Slightly darker pink */
+  transform: scale(1.05); /* Grows slightly */
+  box-shadow: 0 6px 15px rgba(255, 182, 193, 0.6);
+}
+
+button:active {
+  transform: scale(0.95); /* Shrinks when clicked for a "button press" feel */
+}
+
+/* Specific styling for the Affirmations button to make it extra special */
+.affirmation-btn {
+  background-color: #ffffff;
+  color: #ff8fab;
+  border: 2px solid #ffc0cb;
+}
+
+.affirmation-btn:hover {
+  background-color: #fff0f3;
+  color: #ff4d6d;
+}
+
+/* kitty */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Makes the page at least the full height of the screen */
+  margin: 0;
+}
+
+.hello-kitty {
+  margin-top: auto; /* This "pushes" the image to the very bottom of the page */
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  image-rendering: -webkit-optimize-contrast;
+  padding-bottom: 20px;
+}
+
+.hello-kittyndfriends {
+  margin: 0 auto;
+  float: right;
+  width: 100px;
+  image-rendering: -webkit-optimize-contrast;
+  padding-bottom: 20px;
+}
+
+.kittie {
+  margin: 0 auto;
+  float: right;
+  width: 100px;
+  image-rendering: -webkit-optimize-contrast;
+  padding-bottom: 20px;
+}
+
+
+
+body {
+  background-image: url('images/fresh-snow.png'); /* Replace with your image link */
+  background-attachment: fixed; /* Keeps the texture still while she scrolls */
+  background-size: cover; /* Ensures it fills the whole screen */
+  background-repeat: repeat;
+}
+
+/* Interactive Card Component */
+.card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 24px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--pink-medium);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+/* Animated Background Element on Hover */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--pink-light) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography & Content */
+.card h2 {
+  color: var(--pink-dark);
+  margin-top: 0;
+}
+
+.card p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Interactive Button */
+.btn {
+  background: var(--pink-medium);
+  color: var(--white);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.btn:hover {
+  background: var(--pink-dark);
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px var(--shadow);
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Micro-interaction: Floating Icon */
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Layout Grid Container */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Huglove';
+  src: url('fonts/butterpop/Butterpop.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.count-up-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#timer {
+    font-family: 'MyCuteFont', sans-serif;
+    font-size: 2rem;
+    color: #ff8fab;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between the cards */
+}
+
+section li {
+  background-color: #ffffff;
+  border: 2px solid #f5becb;
+  border-radius: 20px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(245, 190, 203, 0.3);
+  transition: transform 0.2s ease;
+  color: #4a4a4a;
+  font-family: 'MyCuteFont',
+}
+
+/* The circular heart icon container */
+section li::before {
+  content: "⭐️";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #fff0f3; /* Very pale pink circle */
+  border-radius: 50%;
+  font-size: 1.2rem;
+  flex-shrink: 0; /* Prevents circle from squishing */
+}
+
+section li:hover {
+  transform: scale(1.02);
+  border-color: #ff85a2; /* Your --pink-medium */
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.photo-card {
+  text-decoration: none;
+  background: white;
+  border: 2px solid var(--pink-light);
+  border-radius: 20px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--pink-medium);
+  background-color: #fff0f3;
+}
+
+.placeholder-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.photo-card span {
+  font-family: 'Huglove', sans-serif;
+  color: var(--pink-dark);
+  font-weight: bold;
+}
+
+.labels-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.wheel-container {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid var(--pink-light);
+    position: relative;
+    overflow: hidden;
+    transition: transform 4s cubic-bezier(0.15, 0, 0.15, 1);
+    background: conic-gradient(
+        var(--pink-light) 0deg 60deg,
+        var(--white) 60deg 120deg,
+        var(--pink-medium) 120deg 180deg,
+        var(--white) 180deg 240deg,
+        var(--pink-dark) 240deg 300deg,
+        var(--white) 300deg 360deg
+    );
+}
+
+.pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: var(--pink-dark);
+    z-index: 10;
+}
+
+.result-box {
+    margin-top: 20px;
+    font-family: 'Huglove', sans-serif;
+    color: var(--pink-dark);
+    min-height: 30px;
+    font-size: 1.2rem;
+}
+
+.labels-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.wheel span {
+    position: absolute;
+    width: 50%;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform-origin: left center;
+    padding-left: 60px; /* Pushes text toward the outer edge */
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+}
